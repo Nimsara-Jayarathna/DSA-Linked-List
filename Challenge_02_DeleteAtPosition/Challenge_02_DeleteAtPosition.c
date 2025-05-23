@@ -34,7 +34,24 @@ struct Node {
 
 // User implements this
 struct Node* solve(struct Node* head, int param) {
-    // Your logic here
+    struct Node* temp = head;
+    struct Node* temp1 = NULL;
+    int position = 1;
+    if (param == 0) {
+        head = head->next;
+        free(temp);
+        return head;
+    }
+    while (temp && param > position) {
+        position++;
+        temp = temp->next;
+    }
+    if (temp == NULL || temp->next == NULL) {
+        return head;
+    } 
+    temp1 = temp->next;
+    temp->next = temp->next->next;
+    free(temp1);
     return head;
 }
 
