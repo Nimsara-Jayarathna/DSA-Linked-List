@@ -1,0 +1,50 @@
+# --- OS-specific files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Compiled binary files ---
+*.exe
+*.out
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.lib
+*.a
+
+# --- Build artifacts ---
+program
+a.out
+*.stackdump
+core
+
+# --- Test outputs ---
+out.txt
+*.log
+*.tmp
+*.test
+*.bak
+
+# --- Shell scripts execution ---
+*.swp
+*.swo
+
+# --- IDEs/editors ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Misc ---
+*.class
+*.pyc
+*.pyo
+*.jar
+*.zip
+*.tar
+*.gz
+*.7z
+*.tgz
+*.rar
