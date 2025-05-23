@@ -37,16 +37,12 @@ struct Node* solve(struct Node* head, int param) {
     int position = 0;
     struct Node* temp = head;
     struct Node* previous = head;
-    int value;
+    while (temp) {
+        if (position == param) {
+            int value;
             struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
             scanf("%d", &value);
             new_node->data = value;
-    if (param == 0) {
-        new_node->next = head;
-        return new_node;
-    }
-    while (temp) {
-        if (position == param) {
             new_node->next = temp;
             previous->next = new_node;
             return head;
@@ -55,7 +51,6 @@ struct Node* solve(struct Node* head, int param) {
         temp = temp->next;
         position++;
     }
-    free(new_node);
     return head;
 }
 
