@@ -34,7 +34,24 @@ struct Node {
 
 // User implements this
 struct Node* solve(struct Node* head, int param) {
-    // Your logic here
+    int position = 0;
+    struct Node* temp = head;
+    struct Node* previous = head;
+    while (temp) {
+        if (position == param) {
+            int value;
+            struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+            scanf("%d", &value);
+            new_node->data = value;
+            new_node->next = temp;
+            previous = new_node;
+            return head;
+        }
+        previous = temp;
+        temp = temp->next;
+        position++;
+    }
+    return head;
     return head;
 }
 
